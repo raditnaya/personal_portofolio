@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portofolio</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar-spasi"></div>
+        <div class="navbar-links">
+          <a href="index.html">Home</a>
+          <a href="#aboutme">About Me</a>
+          <a href="#contact">Contact</a>
+          <a href="#">CV</a>
+        </div>
+        <div class="pilih-tema">
+          <button id="select" class="menu-tarik-turun">
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <div id="opsi-tema" class="opsi">
+            <button id="tema-sun" class="pilih-tema"><i class="fa-solid fa-sun"></i> Cerah</button>
+            <button id="tema-moon" class="pilih-tema"><i class="fa-solid fa-moon"></i> Gelap</button>
+            <button id="tema-system" class="pilih-tema"><i class="fa-solid fa-computer"></i> bawaan</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="article" id="aboutme">
+        <img src="./img/knight pilih senjata.jpg" alt="profil" class="profil-img" />
+
+        <article class="about">
+          <h1>About Me</h1>
+          <p>
+            Halo 🖐 Saya seorang programmer pemula yang memiliki ketertarikan besar dalam dunia pengembangan perangkat lunak. Saat ini saya menguasai beberapa teknologi web dasar dan terus menantang diri untuk mempelajari bahasa pemrograman
+            baru guna memperluas keahlian saya.
+          </p>
+        </article>
+      </section>
+
+      <section class="pemrograman">
+        <h1>Skill</h1>
+        <div class="bahasa-pemrograman">
+          <img src="./img/icons8-html-100.png" alt="html" class="bahasa-pemrograman-img" />
+          <img src="./img/icons8-css-100.png" alt="css" class="bahasa-pemrograman-img" />
+          <img src="./img/icons8-javascript-100.png" alt="javascript" class="bahasa-pemrograman-img" />
+          <img src="./img/icons8-java-100.png" alt="java" class="bahasa-pemrograman-img" />
+          <img src="./img/icons8-python-100.png" alt="python" class="bahasa-pemrograman-img" />
+        </div>
+      </section>
+
+      <section class="buku">
+        <h1>Buku</h1>
+        <div class="daftar-buku">
+          <img src="./img/9 langkah mahir ms word.jpg" alt="9 Langkah Praktis Mahir Ms Word 2007" class="urutan-buku" />
+          <img src="./img/power of personality.jpg" alt="The Power Of Personality" class="urutan-buku" />
+          <img src="./img/ngomongin uang.jpg" alt="Ngomongin Uang" class="urutan-buku" />
+          <img src="./img/adobe photoshop komplet(update version).jpg" alt="Adobe Photoshop Komplet(Update Version)" class="urutan-buku" />
+          <img src="./img/mahir editing video dengan android.jpg" alt="Mahir Editing Video Dengan Android" class="urutan-buku" />
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="form-contact">
+          <form action="">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="tuliskan email anda" />
+            <label for="pesan">Pesan</label>
+            <textarea name="pesan" id="pesan" placeholder="tuliskan pesan anda"></textarea>
+            <br />
+            <button type="submit">Kirim</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>copyright &copy; 2026 di ketik oleh programmer pemula</p>
+      <div class="footer-icon">
+        <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://x.com/X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </footer>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
