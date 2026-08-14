@@ -61,7 +61,19 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-tarik-turun:hover {
+  background-color: #32ed9caa;
+  color: #fff;
+}
+
+.menu-tarik-turun.active {
+  background-color: #32ed9caa !important;
+  color: #fff !important;
 }
 
 .opsi {
@@ -75,7 +87,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   z-index: 10;
-margin-right: 20px;
+  margin-right: 20px;
 }
 
 .opsi.tampil {
@@ -126,7 +138,19 @@ body.dark-theme .opsi button:hover {
   text-decoration: none;
   color: #1e293b;
   font-size: 1rem;
-  padding: 0 12px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #32ed9caa;
+  color: #fff;
+}
+
+.navbar a.active {
+  background-color: #32ed9caa !important;
+  color: #fff !important;
 }
 /* header end */
 
