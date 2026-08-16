@@ -104,7 +104,13 @@ body {
 }
 
 .opsi button:hover {
-  background-color: #f1f5f9;
+  background-color: #16a34a;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.tema i {
+  width: 20px;
 }
 
 body.dark-theme {
@@ -132,6 +138,7 @@ body.dark-theme .opsi button {
 
 body.dark-theme .opsi button:hover {
   background-color: #334155;
+  color: #fff;
 }
 
 .navbar a {
@@ -331,9 +338,33 @@ textarea:focus {
   /* header */
   .navbar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .navbar-spasi {
+    display: none;
+  }
+
+  .navbar-links {
+    flex: unset;
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+  }
+
+  .navbar a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+
+  .pilih-tema {
+    flex: unset;
+    padding-right: 0;
+  }
+
+  .opsi {
+    margin-right: 0;
   }
   /* end header */
 
