@@ -67,12 +67,12 @@ body {
 }
 
 .menu-tarik-turun:hover {
-  background-color: #32ed9caa;
+  background-color: #1b8c5b;
   color: #fff;
 }
 
 .menu-tarik-turun.active {
-  background-color: #32ed9caa !important;
+  background-color: #1b8c5b !important;
   color: #fff !important;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .opsi button:hover {
-  background-color: #16a34a;
+  background-color: #1b8c5b;
   border-radius: 5px;
   color: #fff;
 }
@@ -112,6 +112,76 @@ body {
 .tema i {
   width: 20px;
 }
+
+.navbar a {
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #1b8c5b;
+  color: #fff;
+}
+
+.navbar a.active {
+  background-color: #1b8c5b !important;
+  color: #fff !important;
+}
+/* header end */
+
+/* tema gelap*/
+
+/* header */
+body.dark-theme .header {
+  background-color: #006927;
+}
+
+body.dark-theme .navbar a {
+  color: #f8fafc;
+}
+
+body.dark-theme .navbar a:hover {
+  background-color: #1a945f;
+  color: #0f172a;
+}
+
+body.dark-theme .navbar a.active {
+  background-color: #1a945f !important;
+  color: #0f172a !important;
+}
+
+body.dark-theme .opsi {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-theme .menu-tarik-turun {
+  color: #f8fafc;
+}
+
+body.dark-theme .menu-tarik-turun:hover {
+  background-color: #1a945f;
+  color: #0f172a;
+}
+
+body.dark-theme .menu-tarik-turun.active {
+  background-color: #1a945f;
+  color: #0f172a !important;
+}
+
+body.dark-theme .opsi button {
+  color: #f8fafc;
+}
+
+body.dark-theme .opsi button:hover {
+  background-color: #1a945f;
+  color: #0f172a;
+}
+/* end header */
 
 body.dark-theme {
   background-color: #0f172a;
@@ -126,40 +196,7 @@ body.dark-theme .contact h1,
 body.dark-theme .form-contact label {
   color: #f8fafc;
 }
-
-body.dark-theme .opsi {
-  background-color: #1e293b;
-  border-color: #334155;
-}
-
-body.dark-theme .opsi button {
-  color: #f8fafc;
-}
-
-body.dark-theme .opsi button:hover {
-  background-color: #334155;
-  color: #fff;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #1e293b;
-  font-size: 1rem;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.navbar a:hover {
-  background-color: #32ed9caa;
-  color: #fff;
-}
-
-.navbar a.active {
-  background-color: #32ed9caa !important;
-  color: #fff !important;
-}
-/* header end */
+/* end tema gelap */
 
 /* article */
 .article {
