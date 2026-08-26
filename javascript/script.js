@@ -4,6 +4,8 @@ const temaSun = document.getElementById("tema-sun");
 const temaMoon = document.getElementById("tema-moon");
 const temaSystem = document.getElementById("tema-system");
 const navbarA = document.querySelectorAll("#navbarA a");
+const profilImg = document.querySelector("#profilImg");
+let statusScroll;
 
 // menu tarik-turun
 select.addEventListener("click", (e) => {
@@ -62,3 +64,21 @@ navbarA.forEach((link) => {
   });
 });
 // end perubahan ketika klik navbar
+
+// scroll img
+window.addEventListener("scroll", function () {
+  // ambil posisi saat scroll
+  const posisiScroll = window.scrollY || document.documentElement.scrollTop;
+  // end ambil posisi saat scroll
+
+  if (posisiScroll > 50) {
+    // jika > 50 sembunyikan
+    profilImg.classList.add("hilang-scroll");
+    // end jika > 50 sembunyikan
+  } else {
+    // jika < 50 tampilkan
+    profilImg.classList.remove("hilang-scroll");
+    // end jika < 50 tampilkan
+  }
+});
+// end scroll img
