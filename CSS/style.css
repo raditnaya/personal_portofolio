@@ -212,7 +212,16 @@ body.dark-theme .form-contact label {
   border-radius: 50%;
   margin-top: 20px;
   object-fit: cover;
+  flex-shrink: 0;
+  flex-grow: 0;
   animation: tracking-in-expand-fwd 0.8s ease-in-out forwards;
+}
+
+.animasi-article {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .about h1 {
@@ -229,7 +238,25 @@ body.dark-theme .form-contact label {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.5;
+  display: inline-block;
+}
+
+#teksDeskripsi {
+  font-size: 1rem;
+  display: inline;
+}
+
+.besar-kata {
+  font-size: 2.2rem;
+  font-weight: bold;
+  display: inline-block;
+  align-items: center;
+  gap: 8px;
+}
+
+.emoji-melambai-lambai {
+  width: 45px;
+  height: auto;
 }
 /* article end */
 
@@ -483,6 +510,8 @@ textarea:focus {
 /* animasi */
 
 /* article */
+
+/* animasi img */
 @keyframes tracking-in-expand-fwd {
   0% {
     transform: scale(0.6);
@@ -496,7 +525,9 @@ textarea:focus {
     opacity: 1;
   }
 }
+/* end animasi img */
 
+/* animasi scroll */
 @keyframes tracking-out-contract-bck-top {
   0% {
     transform: translateY(0) scale(1);
@@ -509,8 +540,36 @@ textarea:focus {
 }
 
 .hilang-scroll {
-  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards !important;
 }
+
+.hilang-scroll1 {
+  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards !important;
+}
+
+.hilang-scroll2 {
+  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards !important;
+}
+/* end animasi scroll */
+
+/* animasi kursor kedip */
+@keyframes kedipKursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #16a34a;
+  }
+}
+
+.kursor-teks {
+  border-right: 2px solid #16a34a;
+  animation: kedipKursor 0.8s infinite;
+  vertical-align: middle;
+}
+/* end animasi kursor kedip */
+
 /* end article */
 
 /* end animasi */
