@@ -103,7 +103,7 @@ const scrollImg = {
 
 const penjagaScroll = new IntersectionObserver((item) => {
   item.forEach((subjek) => {
-    if (subjek.isIntersecting) {
+    if (window.scrollY < 50 || subjek.isIntersecting) {
       subjek.target.classList.remove("hilang-scroll");
       subjek.target.classList.add("tampil-scroll");
     } else {
