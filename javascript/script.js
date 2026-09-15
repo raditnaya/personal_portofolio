@@ -26,11 +26,8 @@ const navbarA = document.querySelectorAll("#navbarA a");
 
 // scroll
 const profilImg = document.querySelector("#profilImg");
-let statusScroll;
 const aboutMe = document.querySelector("#aboutMe");
-let statusScroll1;
 const aboutI = document.querySelector("#aboutI");
-let statusScroll2;
 // end scroll
 
 // animasi ketikan
@@ -98,25 +95,28 @@ navbarA.forEach((link) => {
 // end perubahan ketika klik navbar
 
 // scroll
-window.addEventListener("scroll", function () {
-  // ambil posisi saat scroll
-  const posisiScroll = window.scrollY || document.documentElement.scrollTop;
-  // end ambil posisi saat scroll
+const scrollImg = {
+  root: null,
+  rootMargin: "-80px 0px -80px 0px",
+  threshold: 0.4,
+};
 
-  if (posisiScroll > 50) {
-    // jika > 50 sembunyikan
-    profilImg.classList.add("hilang-scroll");
-    aboutMe.classList.add("hilang-scroll1");
-    aboutI.classList.add("hilang-scroll2");
-    // end jika > 50 sembunyikan
-  } else {
-    // jika < 50 tampilkan
-    profilImg.classList.remove("hilang-scroll");
-    aboutMe.classList.remove("hilang-scroll1");
-    aboutI.classList.remove("hilang-scroll2");
-    // end jika < 50 tampilkan
-  }
+const penjagaScroll = new IntersectionObserver((item) => {
+  item.forEach((subjek) => {
+    if (subjek.isIntersecting) {
+      subjek.target.classList.remove("hilang-scroll");
+      subjek.target.classList.add("tampil-scroll");
+    } else {
+      subjek.target.classList.add("hilang-scroll");
+      subjek.target.classList.remove("tampil-scroll");
+    }
+  });
+}, scrollImg);
+
+document.querySelectorAll("#profilImg, #aboutMe, #aboutI").forEach((elemen) => {
+  penjagaScroll.observe(elemen);
 });
+
 // end scroll
 
 // animasi ketikan
