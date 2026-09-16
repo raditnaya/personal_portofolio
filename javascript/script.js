@@ -28,6 +28,8 @@ const navbarA = document.querySelectorAll("#navbarA a");
 const profilImg = document.querySelector("#profilImg");
 const aboutMe = document.querySelector("#aboutMe");
 const aboutI = document.querySelector("#aboutI");
+const skill = document.querySelector("#skillPemrograman");
+const bahasaPemrograman = document.querySelector("#bahasaPemrograman");
 // end scroll
 
 // animasi ketikan
@@ -113,7 +115,7 @@ const penjagaScroll = new IntersectionObserver((item) => {
   });
 }, scrollImg);
 
-document.querySelectorAll("#profilImg, #aboutMe, #aboutI").forEach((elemen) => {
+document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman").forEach((elemen) => {
   penjagaScroll.observe(elemen);
 });
 
