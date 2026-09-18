@@ -273,15 +273,18 @@ body.dark-theme .form-contact label {
 .bahasa-pemrograman {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .bahasa-pemrograman-img {
-  width: 80px;
+  flex: 0 0 calc(16.666% - 15px);
+  width: 70px;
   height: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 /* pemrograman end */
 
@@ -460,7 +463,18 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
+  }
+
+  .bahasa-pemrograman {
+    gap: 10px;
+  }
+
+  .bahasa-pemrograman-img {
+    flex: 0 0 calc(33.333% - 6.66px);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
   }
   /* end pemrograman */
 
@@ -534,25 +548,47 @@ textarea:focus {
 /* end animasi img */
 
 /* animasi scroll */
-@keyframes tracking-out-contract-bck-top {
+@keyframes muncul {
   0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+    opacity: 0;
+    transform: translateY(8px);
   }
   100% {
-    transform: translateY(-50px) scale(0.6);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hilang {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
     opacity: 0;
+    transform: translateY(-8px);
   }
 }
 
 .hilang-scroll {
-  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards !important;
+  animation: hilang 0.3s ease-in-out forwards !important;
+  will-change: transform, opacity;
 }
 
 .tampil-scroll {
-  animation: tracking-in-expand-fwd 0.8s ease-in-out forwards;
+  animation: muncul 0.3s ease-in-out forwards !important;
+  will-change: transform, opacity;
 }
 
+#bahasaPemrograman.hilang-scroll .bahasa-pemrograman-img {
+  animation: hilang 0.3s ease-in-out forwards !important;
+  will-change: transform, opacity;
+}
+
+#bahasaPemrograman.tampil-scroll .bahasa-pemrograman-img {
+  animation: muncul 0.3s ease-in-out forwards !important;
+  will-change: transform, opacity;
+}
 /* end animasi scroll */
 
 /* animasi kursor kedip */

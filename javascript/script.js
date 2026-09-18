@@ -29,7 +29,6 @@ const profilImg = document.querySelector("#profilImg");
 const aboutMe = document.querySelector("#aboutMe");
 const aboutI = document.querySelector("#aboutI");
 const skill = document.querySelector("#skillPemrograman");
-const bahasaPemrograman = document.querySelector("#bahasaPemrograman");
 // end scroll
 
 // animasi ketikan
@@ -99,13 +98,13 @@ navbarA.forEach((link) => {
 // scroll
 const scrollImg = {
   root: null,
-  rootMargin: "-12% 0px -12% 0px",
-  threshold: 0.25,
+  rootMargin: "-10% 0px -10% 0px",
+  threshold: 0.1,
 };
 
 const penjagaScroll = new IntersectionObserver((item) => {
   item.forEach((subjek) => {
-    if (window.scrollY < 50 || subjek.isIntersecting) {
+    if (subjek.isIntersecting) {
       subjek.target.classList.remove("hilang-scroll");
       subjek.target.classList.add("tampil-scroll");
     } else {
