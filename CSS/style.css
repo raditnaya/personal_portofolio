@@ -551,7 +551,7 @@ textarea:focus {
 @keyframes muncul {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
   100% {
     opacity: 1;
@@ -562,31 +562,29 @@ textarea:focus {
 @keyframes hilang {
   0% {
     opacity: 1;
-    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(-8px);
   }
 }
 
 .hilang-scroll {
-  animation: hilang 0.3s ease-in-out forwards !important;
+  animation: hilang 0.25s ease-in-out forwards !important;
   will-change: transform, opacity;
 }
 
 .tampil-scroll {
-  animation: muncul 0.3s ease-in-out forwards !important;
+  animation: muncul 0.4s ease-in-out forwards !important;
   will-change: transform, opacity;
 }
 
 #bahasaPemrograman.hilang-scroll .bahasa-pemrograman-img {
-  animation: hilang 0.3s ease-in-out forwards !important;
+  animation: hilang 0.25s ease-in-out forwards !important;
   will-change: transform, opacity;
 }
 
 #bahasaPemrograman.tampil-scroll .bahasa-pemrograman-img {
-  animation: muncul 0.3s ease-in-out forwards !important;
+  animation: muncul 0.4s ease-in-out forwards !important;
   will-change: transform, opacity;
 }
 /* end animasi scroll */

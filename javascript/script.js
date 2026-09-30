@@ -98,8 +98,8 @@ navbarA.forEach((link) => {
 // scroll
 const scrollImg = {
   root: null,
-  rootMargin: "-10% 0px -10% 0px",
-  threshold: 0.1,
+  rootMargin: "0px",
+  threshold: 0,
 };
 
 const penjagaScroll = new IntersectionObserver((item) => {
