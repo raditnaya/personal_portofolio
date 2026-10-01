@@ -35,6 +35,10 @@ const skill = document.querySelector("#skillPemrograman");
 const tentang = document.getElementById("aboutI");
 // end animasi ketikan
 
+// tab bahasa pemrograman
+const tabSkill = document.querySelectorAll(".tab");
+// end tab bahasa pemrograman
+
 // end deklarasi elemen dom
 
 // menu tarik-turun
@@ -114,7 +118,7 @@ const penjagaScroll = new IntersectionObserver((item) => {
   });
 }, scrollImg);
 
-document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman").forEach((elemen) => {
+document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman, #tabSkill").forEach((elemen) => {
   penjagaScroll.observe(elemen);
 });
 
@@ -158,3 +162,32 @@ window.addEventListener("DOMContentLoaded", ketikHalo);
 // end Jalankan saat halaman web selesai dimuat
 
 // end animasi ketikan
+
+// tab bahasa pemrograman
+const tab = document.querySelectorAll(".tab");
+const gambarSkill = document.querySelectorAll(".bahasa-pemrograman-img");
+
+tab.forEach((tombol) => {
+  tombol.addEventListener("click", () => {
+    tab.forEach((button) => button.classList.remove("active"));
+    tombol.classList.add("active");
+
+    const kategoriDipilih = tombol.getAttribute("data-kategori");
+
+    gambarSkill.forEach((gambar) => {
+      const kategoriGambar = gambar.getAttribute("data-kategori");
+
+      if (kategoriDipilih === "semua" || kategoriGambar === kategoriDipilih) {
+        gambar.classList.remove("sembunyi");
+      } else {
+        gambar.classList.add("sembunyi");
+      }
+    });
+
+    const posisiSkill = document.getElementById("bahasaPemrograman");
+    if (posisiSkill) {
+      posisiSkill.scrollTop = 0;
+    }
+  });
+});
+// end tab bahasa pemrograman

@@ -183,6 +183,24 @@ body.dark-theme .opsi button:hover {
 }
 /* end header */
 
+/* tab */
+body.dark-theme .tab {
+  background-color: #006927;
+}
+
+body.dark-theme .tab:hover,
+body.dark-theme .tab:active {
+  background-color: #1a945f;
+  color: #0f172a;
+}
+/* end tab */
+
+/* scrollbar pemrograman */
+body.dark-theme .bahasa-pemrograman::-webkit-scrollbar-thumb {
+  background-color: #006927;
+}
+/* end scrollbar pemrograman*/
+
 body.dark-theme {
   background-color: #0f172a;
   color: #f8fafc;
@@ -193,7 +211,8 @@ body.dark-theme .about p,
 body.dark-theme .pemrograman h1,
 body.dark-theme .buku h1,
 body.dark-theme .contact h1,
-body.dark-theme .form-contact label {
+body.dark-theme .form-contact label,
+body.dark-theme .tab {
   color: #f8fafc;
 }
 /* end tema gelap */
@@ -277,6 +296,47 @@ body.dark-theme .form-contact label {
   gap: 15px;
   max-width: 800px;
   margin: 0 auto;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.bahasa-pemrograman::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bahasa-pemrograman::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bahasa-pemrograman::-webkit-scrollbar-thumb {
+  background-color: #16a34a;
+  border-radius: 10px;
+}
+
+.kategori-skill {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.tab {
+  background-color: #16a34a;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover,
+.tab:active {
+  background-color: #1b8c5b;
+  color: #fff;
 }
 
 .bahasa-pemrograman-img {
@@ -285,6 +345,11 @@ body.dark-theme .form-contact label {
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bahasa-pemrograman-img.sembunyi {
+  display: none !important;
 }
 /* pemrograman end */
 
@@ -467,6 +532,7 @@ textarea:focus {
 
   .bahasa-pemrograman {
     gap: 10px;
+    max-height: 190px;
   }
 
   .bahasa-pemrograman-img {
@@ -570,7 +636,7 @@ textarea:focus {
 
 .hilang-scroll {
   animation: hilang 0.25s ease-in-out forwards !important;
-  will-change: transform, opacity;
+  will-change: opacity;
 }
 
 .tampil-scroll {
