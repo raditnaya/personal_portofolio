@@ -201,6 +201,33 @@ body.dark-theme .bahasa-pemrograman::-webkit-scrollbar-thumb {
 }
 /* end scrollbar pemrograman*/
 
+/* projek */
+body.dark-theme .projek h1 {
+  color: #f8fafc;
+}
+
+body.dark-theme .kartu-projek {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-theme .detail-gambar-projek h3 {
+  color: #f8fafc;
+}
+
+body.dark-theme .detail-gambar-projek p {
+  color: #94a3b8;
+}
+
+body.dark-theme .link-projek a {
+  color: #f8fafc;
+}
+
+body.dark-theme .link-projek a:hover {
+  color: #1a945f;
+}
+/* end projek */
+
 body.dark-theme {
   background-color: #0f172a;
   color: #f8fafc;
@@ -345,7 +372,6 @@ body.dark-theme .tab {
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
-  transition: opacity 0.3s ease;
 }
 
 .bahasa-pemrograman-img.sembunyi {
@@ -353,8 +379,8 @@ body.dark-theme .tab {
 }
 /* pemrograman end */
 
-/* buku */
-.buku h1 {
+/* projek */
+.projek h1 {
   text-align: center;
   color: #1a1a1a;
   padding: 20px;
@@ -362,21 +388,90 @@ body.dark-theme .tab {
   font-size: 2rem;
 }
 
-.daftar-buku {
+.daftar-projek {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.urutan-buku {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 3px solid #cbd5e1;
+.kartu-projek {
+  background-color: #ffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  width: 380px;
+  overflow: hidden;
 }
-/* buku end */
+
+.gambar-projek {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: block;
+  background-color: #e2e8f0;
+}
+
+.urutan-projek {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-gambar-projek {
+  padding: 18px;
+}
+
+.detail-gambar-projek h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.detail-gambar-projek p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.tag-projek {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.icon-mysql {
+  background: linear-gradient(135deg, #f29111 0%, #00768f 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: inline-block;
+}
+
+.link-projek {
+  display: flex;
+}
+
+.link-projek a {
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.link-projek a:hover {
+  color: #16a34a;
+}
+/* projek end */
 
 /* contact */
 .contact h1 {
@@ -544,14 +639,18 @@ textarea:focus {
   }
   /* end pemrograman */
 
-  /* buku */
-  .buku {
+  /* projek */
+  .projek {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
   }
-  /* end buku */
+
+  .kartu-projek {
+    width: 100%;
+    max-width: 100%;
+  }
+  /* end projek */
 
   /* contact */
   .contact {
