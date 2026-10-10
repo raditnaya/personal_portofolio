@@ -228,6 +228,40 @@ body.dark-theme .link-projek a:hover {
 }
 /* end projek */
 
+
+/* contact */
+body.dark-theme .input-email {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark-theme .input-email::placeholder {
+  color: #f8fafc;
+}
+
+body.dark-theme .textarea-email {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark-theme .textarea-email::placeholder {
+  color: #f8fafc;
+}
+
+body.dark-theme .kirim-email {
+  background-color: #006927;
+  color: #f8fafc;
+}
+/* end contact */
+
+/* footer */
+body.dark-theme .footer {
+  background-color: #006927;
+}
+
+/* end footer */
 body.dark-theme {
   background-color: #0f172a;
   color: #f8fafc;
@@ -239,6 +273,8 @@ body.dark-theme .pemrograman h1,
 body.dark-theme .buku h1,
 body.dark-theme .contact h1,
 body.dark-theme .form-contact label,
+body.dark-theme .footer p,
+body.dark-theme .footer-icon i,
 body.dark-theme .tab {
   color: #f8fafc;
 }
@@ -734,23 +770,28 @@ textarea:focus {
 }
 
 .hilang-scroll {
-  animation: hilang 0.25s ease-in-out forwards !important;
-  will-change: opacity;
+  opacity: 0 !important;
+  animation: hidden !important;
+  visibility: hidden !important;
 }
 
 .tampil-scroll {
+  opacity: 1 !important;
   animation: muncul 0.4s ease-in-out forwards !important;
-  will-change: transform, opacity;
+  visibility: visible !important;
 }
 
 #bahasaPemrograman.hilang-scroll .bahasa-pemrograman-img {
-  animation: hilang 0.25s ease-in-out forwards !important;
-  will-change: transform, opacity;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  animation: none !important;
 }
 
 #bahasaPemrograman.tampil-scroll .bahasa-pemrograman-img {
+  opacity: 1 !important;
+  visibility: visible !important;
   animation: muncul 0.4s ease-in-out forwards !important;
-  will-change: transform, opacity;
+  will-change: opacity, transform !important;
 }
 /* end animasi scroll */
 

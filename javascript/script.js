@@ -31,7 +31,12 @@ const aboutI = document.querySelector("#aboutI");
 const skill = document.querySelector("#skillPemrograman");
 const skillPemrograman = document.querySelector("#bahasaPemrograman");
 const projek = document.querySelector("#projek");
-const daftarProjek = document.querySelector("#daftarProjek");
+const judulContact = document.querySelector("#judulContact");
+const judulEmail = document.querySelector("#judulEmail");
+const email = document.querySelector("#email");
+const judulPesan = document.querySelector("#judulPesan");
+const pesan = document.querySelector("#pesan");
+const kirimEmail = document.querySelector("#kirimEmail");
 // end scroll
 
 // animasi ketikan
@@ -121,7 +126,7 @@ const penjagaScroll = new IntersectionObserver((item) => {
   });
 }, scrollImg);
 
-document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman, #tabSkill, #projek, #daftarProjek, .kartu-projek").forEach((elemen) => {
+document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman, #tabSkill, #projek, .daftar-projek, .kartu-projek, #judulContact, #judulEmail, #email, #judulPesan, #pesan, #kirimEmail").forEach((elemen) => {
   penjagaScroll.observe(elemen);
 });
 

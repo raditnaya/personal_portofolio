@@ -74,9 +74,9 @@
 
       <section class="projek">
         <h1 class="hilang-scroll" id="projek">Projek</h1>
-        <div class="daftar-projek" id="daftarProjek">
+        <div class="daftar-projek">
           <!-- projek 2 -->
-          <div class="kartu-projek hilang-scroll">
+          <div class="kartu-projek">
             <div class="gambar-projek">
               <img src="./img/bank_Catatan_pelajaran.png" alt="bank_catatan_pelajaran" class="urutan-projek" />
             </div>
@@ -99,28 +99,28 @@
           <!-- end projek 2 -->
 
           <!-- projek 3 -->
-          
+
           <!-- end projek 3 -->
         </div>
       </section>
 
       <section class="contact" id="contact">
-        <h1>Contact</h1>
+        <h1 id="judulContact">Contact</h1>
         <div class="form-contact">
-          <form action="">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="tuliskan email anda" />
-            <label for="pesan">Pesan</label>
-            <textarea name="pesan" id="pesan" placeholder="tuliskan pesan anda"></textarea>
+          <form action="" name="contact" netlify>
+            <label for="email" id="judulEmail">Email</label>
+            <input class="input-email" type="email" id="email" name="email" placeholder="tuliskan email anda" required />
+            <label for="pesan" id="judulPesan">Pesan</label>
+            <textarea class="textarea-email" name="pesan" id="pesan" placeholder="tuliskan pesan anda" required></textarea>
             <br />
-            <button type="submit">Kirim</button>
+            <button class="kirim-email" type="submit" id="kirimEmail">Kirim</button>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>copyright &copy; 2026 di ketik oleh programmer pemula</p>
+      <p>copyright &copy; dibuat oleh Naya</p>
       <div class="footer-icon">
         <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
