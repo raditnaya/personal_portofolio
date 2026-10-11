@@ -219,6 +219,10 @@ formEmail.addEventListener("submit", (e) => {
     .then(() => {
       notifEmail.style.display = "block";
       formEmail.reset();
+
+      setTimeout(() => {
+        notifEmail.style.display = "none";
+      }, 4000);
     })
     .catch((error) => {
       alert("Gagal mengirim email. Silakan coba lagi nanti.");
