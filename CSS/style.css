@@ -254,6 +254,12 @@ body.dark-theme .kirim-email {
   background-color: #006927;
   color: #f8fafc;
 }
+
+body.dark-theme .notif-email {
+  background-color: #006927;
+  color: #f8fafc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
 /* end contact */
 
 /* footer */
@@ -262,6 +268,7 @@ body.dark-theme .footer {
 }
 
 /* end footer */
+
 body.dark-theme {
   background-color: #0f172a;
   color: #f8fafc;
@@ -572,14 +579,16 @@ textarea:focus {
 .notif-email {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color:#16a34a;
   color: #ffffff;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   z-index: 9999;
+  white-space: nowrap;
   animation: notifMuncul 0.3s ease-in-out;
 }
 /* end contact */
@@ -743,7 +752,6 @@ textarea:focus {
 /* end responsif */
 
 /* animasi */
-
 /* animasi img */
 @keyframes tracking-in-expand-fwd {
   0% {
@@ -829,13 +837,12 @@ textarea:focus {
 @keyframes notifMuncul {
   from {
     opacity: 0;
-    bottom: 0px;
+    top: 50px;
   } 
   to {
     opacity: 1;
-    bottom: 20px;
+    top: 80px;
   }
 }
 /* end animasi notif emai */
-
 /* end animasi */
