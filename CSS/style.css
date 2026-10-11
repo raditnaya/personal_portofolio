@@ -568,6 +568,13 @@ textarea:focus {
   height: 40px;
   cursor: pointer;
 }
+
+.notif-email {
+  display: none;
+  margin-top: 10px;
+  color: #16a34a;
+  font-weight: bold;
+}
 /* end contact */
 
 /* footer */

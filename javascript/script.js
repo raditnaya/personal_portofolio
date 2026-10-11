@@ -47,6 +47,11 @@ const tentang = document.getElementById("aboutI");
 const tabSkill = document.querySelectorAll(".tab");
 // end tab bahasa pemrograman
 
+// notif email
+const notifEmail = document.getElementById("notifEmail");
+const formEmail = document.getElementById("formEmail");
+// end notif email
+
 // end deklarasi elemen dom
 
 // menu tarik-turun
@@ -199,3 +204,24 @@ tab.forEach((tombol) => {
   });
 });
 // end tab bahasa pemrograman
+
+// notif email
+formEmail.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(formEmail);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      notifEmail.style.display = "block";
+      formEmail.reset();
+    })
+    .catch((error) => {
+      alert("Gagal mengirim email. Silakan coba lagi nanti.");
+    });
+});
+// end notif email
