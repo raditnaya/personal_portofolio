@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 section {
@@ -19,6 +20,13 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /* header */
@@ -131,6 +139,10 @@ body {
   background-color: #1b8c5b !important;
   color: #fff !important;
 }
+
+.navbar-links-projek {
+  padding-left: 10px;
+}
 /* header end */
 
 /* tema gelap*/
@@ -226,8 +238,15 @@ body.dark-theme .link-projek a {
 body.dark-theme .link-projek a:hover {
   color: #1a945f;
 }
-/* end projek */
 
+body.dark-theme .link-halaman-projek a {
+  color: #f8fafc;
+}
+
+body.dark-theme .link-halaman-projek a:hover {
+  color: #1a945f;
+}
+/* end projek */
 
 /* contact */
 body.dark-theme .input-email {
@@ -431,6 +450,11 @@ body.dark-theme .tab {
   font-size: 2rem;
 }
 
+.projek {
+  min-height: calc(100vh - 150px);
+  padding-bottom: 60px;
+}
+
 .daftar-projek {
   display: flex;
   flex-wrap: wrap;
@@ -514,6 +538,25 @@ body.dark-theme .tab {
 .link-projek a:hover {
   color: #16a34a;
 }
+
+.link-halaman-projek {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.link-halaman-projek a {
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.link-halaman-projek a:hover {
+  color: #16a34a;
+}
 /* projek end */
 
 /* contact */
@@ -582,7 +625,7 @@ textarea:focus {
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  background-color:#16a34a;
+  background-color: #16a34a;
   color: #ffffff;
   padding: 12px 20px;
   border-radius: 8px;
@@ -598,6 +641,7 @@ textarea:focus {
   background-color: #16a34a;
   padding-top: 10px;
   padding-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .footer-icon {
@@ -730,6 +774,14 @@ textarea:focus {
     width: 100%;
     max-width: 300px;
   }
+
+  .notif-email {
+    width: 90%;
+    max-width: 340px;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.9rem;
+  }
   /* end contact */
 
   /* footer */
@@ -838,7 +890,7 @@ textarea:focus {
   from {
     opacity: 0;
     top: 50px;
-  } 
+  }
   to {
     opacity: 1;
     top: 80px;

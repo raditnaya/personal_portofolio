@@ -131,7 +131,7 @@ const penjagaScroll = new IntersectionObserver((item) => {
   });
 }, scrollImg);
 
-document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman, #tabSkill, #projek, .daftar-projek, .kartu-projek, #judulContact, #judulEmail, #email, #judulPesan, #pesan, #kirimEmail").forEach((elemen) => {
+document.querySelectorAll("#profilImg, #aboutMe, #aboutI, #skillPemrograman, #bahasaPemrograman, #tabSkill, #projek, .daftar-projek, .kartu-projek, #judulContact, #judulEmail, #email, #judulPesan, #pesan, #kirimEmail, .link-halaman-projek").forEach((elemen) => {
   penjagaScroll.observe(elemen);
 });
 
